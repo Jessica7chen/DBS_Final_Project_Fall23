@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Insurance Information Form</title>
+</head>
+<body>
+    <h2>Insurance Information Form</h2>
+    <form method="post" action="/insurance_form">
+        Name: <input type="text" name="name" required><br>
+        Date of Birth: <input type="date" name="dob" required><br>
+        Height (cm): <input type="number" name="height" required><br>
+        Weight (kg): <input type="number" name="weight" required><br>
+        Smoking: <input type="checkbox" name="smoking" value="yes"><br>
+        Chronic Disease: <input type="text" name="chronic_disease"><br>
+        State: <input type="text" name="state" required><br>
+        Country: <input type="text" name="country" required><br>
+        Chronic Diseases (comma-separated, e.g., Diabetes, Cancer): <input type="text" name="chronic_disease"><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+
+

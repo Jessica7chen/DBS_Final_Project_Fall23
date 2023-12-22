@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Risk Assessment</title>
+</head>
+<body>
+    <h2>Risk Assessment</h2>
+    <p>Your assessed risk level: {{ risk_level }}</p>
+    <!-- Display different insurance quotes based on the risk level -->
+    {% if risk_level == 'Low' %}
+        <p>Insurance Quote: $100</p>
+    {% elif risk_level == 'Medium' %}
+        <p>Insurance Quote: $200</p>
+    {% elif risk_level == 'High' %}
+        <p>Insurance Quote: $300</p>
+    {% endif %}
+
+    <!-- Form to agree or disagree with the quote -->
+    <form action="{{ url_for('quote_response') }}" method="post">
+        <input type="radio" id="agree" name="quote_response" value="agree" required>
+        <label for="agree">I agree with the quote</label><br>
+        <input type="radio" id="disagree" name="quote_response" value="disagree">
+        <label for="disagree">I disagree with the quote</label><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+

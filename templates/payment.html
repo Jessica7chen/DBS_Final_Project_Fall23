@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment</title>
+</head>
+<body>
+    <h2>Payment Page</h2>
+    <p>Please enter your fake account number to proceed with the payment.</p>
+    
+    <form method="post" action="{{ url_for('payment') }}">
+        Fake Account Number: <input type="text" name="account_number" required><br>
+        <input type="submit" value="Make Payment">
+    </form>
+</body>
+</html>
